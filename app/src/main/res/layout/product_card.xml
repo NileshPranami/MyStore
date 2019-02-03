@@ -82,25 +82,46 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <RatingBar
-                    android:id="@+id/cv_rating_bar"
-                    style="?android:attr/ratingBarStyleSmall"
-                    android:layout_width="@dimen/rating_bar_layout_width"
-                    android:layout_height="wrap_content"
-                    android:numStars="5"
-                    android:padding="@dimen/cmv_padding"
-                    android:theme="@style/RatingBar" />
+                android:orientation="horizontal"
+                android:layout_margin="16dp">
 
                 <TextView
-                    android:id="@+id/cv_total_ratings"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/cmv_padding"
-                    android:paddingTop="@dimen/cmv_padding"
-                    android:text="Number"
-                    android:textColor="@color/colorPrimary" />
+                    android:layout_marginRight="16dp"
+                    android:text="Quantity: "
+                    android:textSize="16sp"
+                    android:textColor="@android:color/black"/>
+
+                <Button
+                    android:id="@+id/decrementQuantity"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="#eeeeee"
+                    android:text="-"
+                    android:onClick="decrement"/>
+
+                <EditText
+                    android:id="@+id/quantityProductPage"
+                    android:layout_width="40dp"
+                    android:gravity="center"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp"
+                    android:inputType="number"
+                    tools:text="1"/>
+
+                <Button
+                    android:id="@+id/incrementQuantity"
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:backgroundTint="#eeeeee"
+                    android:text="+"
+                    android:onClick="increment"/>
 
             </LinearLayout>
         </LinearLayout>
